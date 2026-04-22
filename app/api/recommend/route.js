@@ -39,8 +39,8 @@ Respond ONLY as valid JSON with no markdown, no backticks, no extra text:
 
     const data = await response.json();
 
-    if (!data.content || data.content.length === 0) {
-      return Response.json({ success: false, error: "Empty response" }, { status: 500 });
+   if (!data.content || data.content.length === 0) {
+      return Response.json({ success: false, error: "Empty response", raw: data }, { status: 500 });
     }
 
     const text = data.content[0].text;
