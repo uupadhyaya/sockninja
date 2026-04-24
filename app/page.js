@@ -61,49 +61,51 @@ const SOCK_IMAGES = {
   "fun": "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=1400&h=700&fit=crop&q=90",
 };
 
+// Each option uses an emoji icon instead of a photo for 100% clarity
+// Icons are clear, instantly recognizable, never mismatched
 const STYLE_OPTIONS = {
   top: [
-    { label: "Suit & Tie", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=600&fit=crop&q=90" },
-    { label: "Dress Shirt", img: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&h=600&fit=crop&q=90" },
-    { label: "Button-down Casual", img: "https://images.unsplash.com/photo-1594938298603-c8148c4b4de0?w=600&h=600&fit=crop&q=90" },
-    { label: "Polo", img: "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?w=600&h=600&fit=crop&q=90" },
-    { label: "Crewneck Sweater", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=600&fit=crop&q=90" },
-    { label: "Turtleneck", img: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&h=600&fit=crop&q=90" },
-    { label: "Hoodie", img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&h=600&fit=crop&q=90" },
-    { label: "Graphic Tee", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=600&fit=crop&q=90" },
-    { label: "Plain Tee", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop&q=90" },
-    { label: "Blazer", img: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?w=600&h=600&fit=crop&q=90" },
-    { label: "Cardigan", img: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=600&fit=crop&q=90" },
+    { label: "Suit & Tie", emoji: "👔", color: "#1a1a2e", desc: "Formal two-piece" },
+    { label: "Dress Shirt", emoji: "👕", color: "#16213e", desc: "Collared, tucked" },
+    { label: "Button-down Casual", emoji: "🪡", color: "#1a2744", desc: "Relaxed fit" },
+    { label: "Polo", emoji: "🎽", color: "#1a3a1a", desc: "Collar, short sleeve" },
+    { label: "Crewneck Sweater", emoji: "🧶", color: "#2a1a0e", desc: "Knit, round neck" },
+    { label: "Turtleneck", emoji: "🌀", color: "#1a0e2a", desc: "High neck knit" },
+    { label: "Hoodie", emoji: "🦘", color: "#1a1a1a", desc: "Hood & drawstring" },
+    { label: "Graphic Tee", emoji: "🖼️", color: "#2a1a1a", desc: "Printed design" },
+    { label: "Plain Tee", emoji: "⬜", color: "#2a2a2a", desc: "Simple, solid color" },
+    { label: "Blazer", emoji: "🥼", color: "#0e1a2a", desc: "Structured jacket" },
+    { label: "Cardigan", emoji: "🧥", color: "#1a2a1a", desc: "Open-front knit" },
   ],
   bottom: [
-    { label: "Formal Trousers", img: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=600&h=600&fit=crop&q=90" },
-    { label: "Chinos / Slacks", img: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=600&fit=crop&q=90" },
-    { label: "Dark Jeans", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=600&fit=crop&q=90" },
-    { label: "Light Jeans", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90" },
-    { label: "Shorts", img: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&h=600&fit=crop&q=90" },
-    { label: "Joggers", img: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&h=600&fit=crop&q=90" },
-    { label: "Skirt / Dress", img: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&h=600&fit=crop&q=90" },
+    { label: "Formal Trousers", emoji: "👔", color: "#1a1a2e", desc: "Tailored dress pants" },
+    { label: "Chinos / Slacks", emoji: "🟤", color: "#2a1a0e", desc: "Smart casual pants" },
+    { label: "Dark Jeans", emoji: "🔵", color: "#0e1a2a", desc: "Deep indigo denim" },
+    { label: "Light Jeans", emoji: "🩵", color: "#1a2a3a", desc: "Faded blue denim" },
+    { label: "Shorts", emoji: "🩳", color: "#1a2a1a", desc: "Above-the-knee" },
+    { label: "Joggers", emoji: "🏃", color: "#1a1a1a", desc: "Elastic waist, tapered" },
+    { label: "Skirt / Dress", emoji: "👗", color: "#2a1a2a", desc: "Feminine silhouette" },
   ],
   shoes: [
-    { label: "Oxford / Derby", img: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&h=600&fit=crop&q=90" },
-    { label: "Loafers", img: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&h=600&fit=crop&q=90" },
-    { label: "Chelsea Boots", img: "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&h=600&fit=crop&q=90" },
-    { label: "Ankle Boots", img: "https://images.unsplash.com/photo-1542838686-b8a8a5b92b22?w=600&h=600&fit=crop&q=90" },
-    { label: "Clean Sneakers", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90" },
-    { label: "Bold Sneakers", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90" },
-    { label: "Running Shoes", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90" },
-    { label: "Sandals", img: "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=600&fit=crop&q=90" },
-    { label: "Boat Shoes", img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&h=600&fit=crop&q=90" },
-    { label: "Heels / Flats", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=600&fit=crop&q=90" },
+    { label: "Oxford / Derby", emoji: "👞", color: "#1a0e0e", desc: "Laced dress shoe" },
+    { label: "Loafers", emoji: "🥿", color: "#2a1a0e", desc: "Slip-on classic" },
+    { label: "Chelsea Boots", emoji: "🥾", color: "#1a1a0e", desc: "Ankle, elastic side" },
+    { label: "Ankle Boots", emoji: "👢", color: "#1a0e1a", desc: "Short boot, any style" },
+    { label: "Clean Sneakers", emoji: "👟", color: "#2a2a2a", desc: "White / minimal" },
+    { label: "Bold Sneakers", emoji: "🌈", color: "#1a0e2a", desc: "Colorful, chunky" },
+    { label: "Running Shoes", emoji: "🏃", color: "#1a2a1a", desc: "Athletic, cushioned" },
+    { label: "Sandals", emoji: "🩴", color: "#2a1a0e", desc: "Open toe, strapped" },
+    { label: "Boat Shoes", emoji: "⛵", color: "#1a2a2a", desc: "Leather, deck style" },
+    { label: "Heels / Flats", emoji: "👠", color: "#2a1a1a", desc: "Elevated or flat" },
   ],
   occasion: [
-    { label: "Work / Office", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=600&fit=crop&q=90" },
-    { label: "Formal Event", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=600&fit=crop&q=90" },
-    { label: "Casual Hangout", img: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=600&fit=crop&q=90" },
-    { label: "Date Night", img: "https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=600&h=600&fit=crop&q=90" },
-    { label: "Gym / Sports", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=600&fit=crop&q=90" },
-    { label: "Travel", img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=600&fit=crop&q=90" },
-    { label: "Wedding / Gala", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop&q=90" },
+    { label: "Work / Office", emoji: "💼", color: "#0e1a2a", desc: "Professional setting" },
+    { label: "Formal Event", emoji: "🎩", color: "#1a1a1a", desc: "Black tie / gala" },
+    { label: "Casual Hangout", emoji: "☕", color: "#2a1a0e", desc: "Relaxed, everyday" },
+    { label: "Date Night", emoji: "🌹", color: "#2a0e1a", desc: "Romantic evening" },
+    { label: "Gym / Sports", emoji: "💪", color: "#0e2a1a", desc: "Active, workout" },
+    { label: "Travel", emoji: "✈️", color: "#0e1a2a", desc: "Comfort on the go" },
+    { label: "Wedding / Gala", emoji: "💍", color: "#1a1a0e", desc: "Dressed to impress" },
   ],
 };
 
@@ -115,26 +117,28 @@ const stepMeta = [
   { label: "What's the occasion?", icon: "📍", color: "#4D96FF" },
 ];
 
-function PhotoOption({ option, selected, color, onClick }) {
+function EmojiOption({ option, selected, color, onClick }) {
   return (
-    <div onClick={onClick} style={{ cursor: "pointer", borderRadius: 14, overflow: "hidden", border: selected ? `3px solid ${color}` : "3px solid transparent", boxShadow: selected ? `0 0 24px ${color}88` : "0 2px 12px rgba(0,0,0,0.4)", transition: "all 0.2s", transform: selected ? "scale(1.05)" : "scale(1)", background: "#1a1a2e", position: "relative" }}>
-      <div style={{ position: "relative", paddingBottom: "100%", overflow: "hidden" }}>
-        <img
-          src={option.img}
-          alt={option.label}
-          loading="lazy"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease, filter 0.3s ease", filter: selected ? "brightness(1.05) saturate(1.1)" : "brightness(0.8) saturate(0.9)" }}
-          onMouseEnter={e => { if (!selected) e.target.style.filter = "brightness(1) saturate(1)"; }}
-          onMouseLeave={e => { if (!selected) e.target.style.filter = "brightness(0.8) saturate(0.9)"; }}
-        />
-        {selected && (
-          <div style={{ position: "absolute", top: 8, right: 8, width: 26, height: 26, borderRadius: "50%", background: color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#000", boxShadow: `0 0 12px ${color}` }}>✓</div>
-        )}
-        <div style={{ position: "absolute", inset: 0, background: selected ? `linear-gradient(to top, ${color}33 0%, transparent 60%)` : "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)" }} />
+    <div onClick={onClick} style={{
+      cursor: "pointer", borderRadius: 16, overflow: "hidden",
+      border: selected ? `2.5px solid ${color}` : "2.5px solid rgba(255,255,255,0.08)",
+      boxShadow: selected ? `0 0 24px ${color}66` : "0 2px 8px rgba(0,0,0,0.3)",
+      transition: "all 0.2s", transform: selected ? "scale(1.05)" : "scale(1)",
+      background: selected ? `${color}18` : option.color,
+      display: "flex", flexDirection: "column", alignItems: "center",
+      justifyContent: "center", padding: "18px 8px", gap: 8, minHeight: 100,
+    }}
+      onMouseEnter={e => { if (!selected) { e.currentTarget.style.borderColor = `${color}66`; e.currentTarget.style.background = `${color}0D`; } }}
+      onMouseLeave={e => { if (!selected) { e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.background = option.color; } }}
+    >
+      <span style={{ fontSize: 32, lineHeight: 1 }}>{option.emoji}</span>
+      <div style={{ textAlign: "center" }}>
+        <div style={{ fontSize: 12, color: selected ? color : "rgba(255,255,255,0.9)", fontWeight: selected ? 700 : 600, lineHeight: 1.2, marginBottom: 3 }}>{option.label}</div>
+        <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", lineHeight: 1.2 }}>{option.desc}</div>
       </div>
-      <div style={{ padding: "10px 12px", background: selected ? `${color}22` : "rgba(255,255,255,0.04)", borderTop: selected ? `1px solid ${color}55` : "1px solid rgba(255,255,255,0.07)" }}>
-        <span style={{ fontSize: 12, color: selected ? color : "rgba(255,255,255,0.85)", fontWeight: selected ? 700 : 500, lineHeight: 1.2, display: "block", textAlign: "center" }}>{option.label}</span>
-      </div>
+      {selected && (
+        <div style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, borderRadius: "50%", background: color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 800, color: "#000" }}>✓</div>
+      )}
     </div>
   );
 }
@@ -179,13 +183,13 @@ function ShopSection({ products }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14 }}>
           {filtered.map((p, i) => (
             <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", borderRadius: 18, overflow: "hidden", background: "rgba(255,255,255,0.05)", border: "2px solid rgba(255,255,255,0.1)", transition: "all 0.25s", display: "block" }}
-              onMouseEnter={e => { e.currentTarget.style.border = "2px solid #FFD93D"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(255,217,61,0.25)"; }}
+              onMouseEnter={e => { e.currentTarget.style.border = "2px solid #FFD93D"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(255,217,61,0.2)"; }}
               onMouseLeave={e => { e.currentTarget.style.border = "2px solid rgba(255,255,255,0.1)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
-              <div style={{ position: "relative", paddingBottom: "75%", overflow: "hidden" }}>
+              <div style={{ position: "relative", paddingBottom: "70%", overflow: "hidden" }}>
                 <img src={p.img} alt={p.name} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }}
                   onMouseEnter={e => e.target.style.transform = "scale(1.06)"}
                   onMouseLeave={e => e.target.style.transform = "scale(1)"} />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)" }} />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)" }} />
                 <div style={{ position: "absolute", top: 10, left: 10, background: "rgba(0,0,0,0.75)", borderRadius: 20, padding: "4px 12px", fontSize: 10, color: "#6BCB77", fontWeight: 700, border: "1px solid rgba(107,203,119,0.4)", backdropFilter: "blur(8px)" }}>{p.tag}</div>
               </div>
               <div style={{ padding: "14px 16px" }}>
@@ -318,6 +322,7 @@ export default function SockNinja() {
             <div style={{ display: "flex", gap: 6, marginBottom: 32 }}>
               {steps.map((s, i) => (<div key={s} style={{ flex: 1, height: 4, borderRadius: 2, background: i <= step ? stepMeta[i].color : "rgba(255,255,255,0.1)", transition: "background 0.4s", cursor: i < step ? "pointer" : "default", boxShadow: i <= step ? `0 0 8px ${stepMeta[i].color}` : "none" }} onClick={() => i < step && setStep(i)} />))}
             </div>
+
             {step > 0 && (
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
                 {steps.slice(0, step).map((s, i) => (
@@ -325,7 +330,7 @@ export default function SockNinja() {
                     <div key={s} onClick={() => setStep(i)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 14px", background: "rgba(255,255,255,0.06)", border: `1px solid ${stepMeta[i].color}44`, borderRadius: 50, cursor: "pointer", transition: "all 0.2s" }}
                       onMouseEnter={e => e.currentTarget.style.borderColor = stepMeta[i].color}
                       onMouseLeave={e => e.currentTarget.style.borderColor = `${stepMeta[i].color}44`}>
-                      <span style={{ fontSize: 14 }}>{stepMeta[i].icon}</span>
+                      <span>{STYLE_OPTIONS[s].find(o => o.label === selections[s])?.emoji}</span>
                       <span style={{ fontSize: 12, color: stepMeta[i].color, fontWeight: 600 }}>{selections[s]}</span>
                       <span style={{ fontSize: 10, color: "rgba(255,255,255,0.2)" }}>✕</span>
                     </div>
@@ -333,15 +338,19 @@ export default function SockNinja() {
                 ))}
               </div>
             )}
-            <div className="fade-up" key={step} style={{ background: "rgba(255,255,255,0.04)", border: `2px solid ${currentColor}33`, borderRadius: 20, padding: "24px 20px", marginBottom: 20, boxShadow: `0 0 40px ${currentColor}10` }}>
+
+            <div className="fade-up" key={step} style={{ background: "rgba(255,255,255,0.03)", border: `2px solid ${currentColor}33`, borderRadius: 20, padding: "24px 20px", marginBottom: 20, boxShadow: `0 0 40px ${currentColor}10` }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: `${currentColor}22`, border: `2px solid ${currentColor}44`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{stepMeta[step].icon}</div>
                 <h2 style={{ fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "'Syne', sans-serif" }}>{stepMeta[step].label}</h2>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
-                {STYLE_OPTIONS[steps[step]].map(opt => (<PhotoOption key={opt.label} option={opt} selected={selections[steps[step]] === opt.label} color={currentColor} onClick={() => select(steps[step], opt.label)} />))}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, position: "relative" }}>
+                {STYLE_OPTIONS[steps[step]].map(opt => (
+                  <EmojiOption key={opt.label} option={opt} selected={selections[steps[step]] === opt.label} color={currentColor} onClick={() => select(steps[step], opt.label)} />
+                ))}
               </div>
             </div>
+
             {allSelected && (
               <div className="fade-up">
                 {usesLeft > 0 ? (
@@ -372,9 +381,9 @@ export default function SockNinja() {
                   <div style={{ position: "absolute", bottom: 20, left: 28, right: 28, display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
                     <div>
                       <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", letterSpacing: "3px", textTransform: "uppercase", marginBottom: 6 }}>Recommended Style</div>
-                      <div style={{ fontSize: 26, fontFamily: "'Syne', sans-serif", fontWeight: 800, color: "#FFD93D", textTransform: "capitalize", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{result.sockType} Socks</div>
+                      <div style={{ fontSize: 26, fontFamily: "'Syne', sans-serif", fontWeight: 800, color: "#FFD93D", textTransform: "capitalize" }}>{result.sockType} Socks</div>
                     </div>
-                    {result.confidenceLevel && (<span style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: 50, background: `${confidenceColors[result.confidenceLevel]}33`, color: confidenceColors[result.confidenceLevel], border: `1.5px solid ${confidenceColors[result.confidenceLevel]}66`, fontWeight: 700, backdropFilter: "blur(8px)" }}>{result.confidenceLevel}</span>)}
+                    {result.confidenceLevel && (<span style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: 50, background: `${confidenceColors[result.confidenceLevel]}33`, color: confidenceColors[result.confidenceLevel], border: `1.5px solid ${confidenceColors[result.confidenceLevel]}66`, fontWeight: 700 }}>{result.confidenceLevel}</span>)}
                   </div>
                 </div>
               )}
