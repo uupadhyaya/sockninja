@@ -3,34 +3,34 @@ import { useState, useRef } from "react";
 
 const AFFILIATE_PRODUCTS = {
   "no-show": [
-    { name: "Bombas No-Show 6-Pack", price: "$48", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Best Seller" },
-    { name: "Nike Everyday No-Show", price: "$14", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Budget Pick" },
-    { name: "Stance Icon No-Show", price: "$16", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Premium" },
+    { name: "Bombas No-Show 6-Pack", price: "$48", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller" },
+    { name: "Nike Everyday No-Show", price: "$14", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget Pick" },
+    { name: "Stance Icon No-Show", price: "$16", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium" },
   ],
   "ankle": [
-    { name: "Happy Socks Solid Ankle", price: "$12", store: "Happy Socks", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Colorful" },
-    { name: "Bombas Ankle 4-Pack", price: "$48", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Best Seller" },
-    { name: "Adidas Cushioned Ankle", price: "$18", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Athletic" },
+    { name: "Happy Socks Solid Ankle", price: "$12", store: "Happy Socks", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Colorful" },
+    { name: "Bombas Ankle 4-Pack", price: "$48", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller" },
+    { name: "Adidas Cushioned Ankle", price: "$18", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Athletic" },
   ],
   "crew": [
-    { name: "Darn Tough Merino Crew", price: "$22", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Premium" },
-    { name: "Happy Socks Stripe Crew", price: "$14", store: "Happy Socks", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Fun Pattern" },
-    { name: "Uniqlo Supima Cotton Crew", price: "$10", store: "Uniqlo", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Value" },
+    { name: "Darn Tough Merino Crew", price: "$22", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium" },
+    { name: "Happy Socks Stripe Crew", price: "$14", store: "Happy Socks", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Fun Pattern" },
+    { name: "Uniqlo Supima Cotton Crew", price: "$10", store: "Uniqlo", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Value" },
   ],
   "dress": [
-    { name: "Gold Toe Over-the-Calf", price: "$20", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Classic" },
-    { name: "Pantherella Merino Dress", price: "$28", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Luxury" },
-    { name: "Brooks Brothers Ribbed", price: "$18", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Business" },
+    { name: "Gold Toe Over-the-Calf", price: "$20", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Classic" },
+    { name: "Pantherella Merino Dress", price: "$28", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Luxury" },
+    { name: "Brooks Brothers Ribbed", price: "$18", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Business" },
   ],
   "athletic": [
-    { name: "Balega Hidden Comfort", price: "$14", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Runner's Fave" },
-    { name: "Nike Dri-FIT Crew 6-Pack", price: "$22", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Best Seller" },
-    { name: "Feetures Elite Cushion", price: "$19", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Performance" },
+    { name: "Balega Hidden Comfort", price: "$14", store: "Amazon", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Runner's Fave" },
+    { name: "Nike Dri-FIT Crew 6-Pack", price: "$22", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller" },
+    { name: "Feetures Elite Cushion", price: "$19", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Performance" },
   ],
   "fun": [
-    { name: "Happy Socks Gift Box 4-Pack", price: "$46", store: "Happy Socks", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Gift Ready" },
-    { name: "Stance Butter Blend Crew", price: "$18", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Premium" },
-    { name: "Odd Sox Novelty Crew", price: "$12", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=YOUR_TAG", tag: "Statement" },
+    { name: "Happy Socks Gift Box 4-Pack", price: "$46", store: "Happy Socks", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Gift Ready" },
+    { name: "Stance Butter Blend Crew", price: "$18", store: "Amazon", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium" },
+    { name: "Odd Sox Novelty Crew", price: "$12", store: "Amazon", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=200&h=200&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Statement" },
   ],
 };
 
