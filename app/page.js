@@ -3,107 +3,107 @@ import { useState, useRef } from "react";
 
 const AFFILIATE_PRODUCTS = {
   "no-show": [
-    { name: "Bombas No-Show 6-Pack", price: 48, store: "Bombas", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Bombas" },
-    { name: "Nike Everyday No-Show", price: 14, store: "Nike", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget Pick", brand: "Nike" },
-    { name: "Stance Icon No-Show", price: 16, store: "Stance", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Stance" },
-    { name: "Balega Hidden No-Show", price: 14, store: "Balega", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Runner's Pick", brand: "Balega" },
-    { name: "Adidas No-Show 6-Pack", price: 18, store: "Adidas", img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Value Pack", brand: "Adidas" },
-    { name: "Feetures No-Show Tab", price: 19, store: "Feetures", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Performance", brand: "Feetures" },
+    { name: "Bombas No-Show 6-Pack", price: 48, store: "Bombas", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Bombas" },
+    { name: "Nike Everyday No-Show", price: 14, store: "Nike", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget Pick", brand: "Nike" },
+    { name: "Stance Icon No-Show", price: 16, store: "Stance", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Stance" },
+    { name: "Balega Hidden No-Show", price: 14, store: "Balega", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Runner's Pick", brand: "Balega" },
+    { name: "Adidas No-Show 6-Pack", price: 18, store: "Adidas", img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Value Pack", brand: "Adidas" },
+    { name: "Feetures No-Show Tab", price: 19, store: "Feetures", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Performance", brand: "Feetures" },
   ],
   "ankle": [
-    { name: "Happy Socks Ankle Pack", price: 12, store: "Happy Socks", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Colorful", brand: "Happy Socks" },
-    { name: "Bombas Ankle 4-Pack", price: 48, store: "Bombas", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Bombas" },
-    { name: "Adidas Cushioned Ankle", price: 18, store: "Adidas", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Athletic", brand: "Adidas" },
-    { name: "Nike Everyday Ankle", price: 14, store: "Nike", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Everyday", brand: "Nike" },
-    { name: "Stance Uncommon Ankle", price: 18, store: "Stance", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Stance" },
-    { name: "Uniqlo Short Ankle", price: 8, store: "Uniqlo", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget", brand: "Uniqlo" },
+    { name: "Happy Socks Ankle Pack", price: 12, store: "Happy Socks", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Colorful", brand: "Happy Socks" },
+    { name: "Bombas Ankle 4-Pack", price: 48, store: "Bombas", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Bombas" },
+    { name: "Adidas Cushioned Ankle", price: 18, store: "Adidas", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Athletic", brand: "Adidas" },
+    { name: "Nike Everyday Ankle", price: 14, store: "Nike", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Everyday", brand: "Nike" },
+    { name: "Stance Uncommon Ankle", price: 18, store: "Stance", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Stance" },
+    { name: "Uniqlo Short Ankle", price: 8, store: "Uniqlo", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget", brand: "Uniqlo" },
   ],
   "crew": [
-    { name: "Darn Tough Merino Crew", price: 22, store: "Darn Tough", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Darn Tough" },
-    { name: "Happy Socks Stripe Crew", price: 14, store: "Happy Socks", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Fun Pattern", brand: "Happy Socks" },
-    { name: "Uniqlo Supima Crew", price: 10, store: "Uniqlo", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget", brand: "Uniqlo" },
-    { name: "Bombas Crew 4-Pack", price: 48, store: "Bombas", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Bombas" },
-    { name: "Stance OG Crew", price: 16, store: "Stance", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Stylish", brand: "Stance" },
-    { name: "Nike Dri-FIT Crew 6-Pack", price: 22, store: "Nike", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Athletic", brand: "Nike" },
+    { name: "Darn Tough Merino Crew", price: 22, store: "Darn Tough", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Darn Tough" },
+    { name: "Happy Socks Stripe Crew", price: 14, store: "Happy Socks", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Fun Pattern", brand: "Happy Socks" },
+    { name: "Uniqlo Supima Crew", price: 10, store: "Uniqlo", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget", brand: "Uniqlo" },
+    { name: "Bombas Crew 4-Pack", price: 48, store: "Bombas", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Bombas" },
+    { name: "Stance OG Crew", price: 16, store: "Stance", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Stylish", brand: "Stance" },
+    { name: "Nike Dri-FIT Crew 6-Pack", price: 22, store: "Nike", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Athletic", brand: "Nike" },
   ],
   "dress": [
-    { name: "Pantherella Merino Dress", price: 28, store: "Pantherella", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Luxury", brand: "Pantherella" },
-    { name: "Gold Toe Over-the-Calf", price: 20, store: "Gold Toe", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Classic", brand: "Gold Toe" },
-    { name: "Brooks Brothers Ribbed", price: 18, store: "Brooks Brothers", img: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Business", brand: "Brooks Brothers" },
-    { name: "Falke Airport Sock", price: 32, store: "Falke", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Ultra Premium", brand: "Falke" },
-    { name: "Polo Ralph Lauren Dress", price: 16, store: "Ralph Lauren", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Preppy", brand: "Ralph Lauren" },
-    { name: "Amazon Essentials Dress 10-Pack", price: 15, store: "Amazon", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget", brand: "Amazon" },
+    { name: "Pantherella Merino Dress", price: 28, store: "Pantherella", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Luxury", brand: "Pantherella" },
+    { name: "Gold Toe Over-the-Calf", price: 20, store: "Gold Toe", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Classic", brand: "Gold Toe" },
+    { name: "Brooks Brothers Ribbed", price: 18, store: "Brooks Brothers", img: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Business", brand: "Brooks Brothers" },
+    { name: "Falke Airport Sock", price: 32, store: "Falke", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Ultra Premium", brand: "Falke" },
+    { name: "Polo Ralph Lauren Dress", price: 16, store: "Ralph Lauren", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Preppy", brand: "Ralph Lauren" },
+    { name: "Amazon Essentials 10-Pack", price: 15, store: "Amazon", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Budget", brand: "Amazon" },
   ],
   "athletic": [
-    { name: "Balega Hidden Comfort", price: 14, store: "Balega", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Runner's Fave", brand: "Balega" },
-    { name: "Nike Dri-FIT 6-Pack", price: 22, store: "Nike", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Nike" },
-    { name: "Feetures Elite Max", price: 19, store: "Feetures", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Performance", brand: "Feetures" },
-    { name: "Adidas Ultraboost Sock", price: 20, store: "Adidas", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Adidas" },
-    { name: "Bombas Athletic Ankle", price: 14, store: "Bombas", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Cushioned", brand: "Bombas" },
-    { name: "Saucony Bolt No-Show 8-Pack", price: 18, store: "Saucony", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Value", brand: "Saucony" },
+    { name: "Balega Hidden Comfort", price: 14, store: "Balega", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Runner's Fave", brand: "Balega" },
+    { name: "Nike Dri-FIT 6-Pack", price: 22, store: "Nike", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Best Seller", brand: "Nike" },
+    { name: "Feetures Elite Max", price: 19, store: "Feetures", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Performance", brand: "Feetures" },
+    { name: "Adidas Ultraboost Sock", price: 20, store: "Adidas", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Adidas" },
+    { name: "Bombas Athletic Ankle", price: 14, store: "Bombas", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Cushioned", brand: "Bombas" },
+    { name: "Saucony Bolt 8-Pack", price: 18, store: "Saucony", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Value", brand: "Saucony" },
   ],
   "fun": [
-    { name: "Happy Socks Gift Box 4-Pack", price: 46, store: "Happy Socks", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Gift Ready", brand: "Happy Socks" },
-    { name: "Stance Butter Blend", price: 18, store: "Stance", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Stance" },
-    { name: "Odd Sox Novelty Crew", price: 12, store: "Odd Sox", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Statement", brand: "Odd Sox" },
-    { name: "Hot Sox Novelty Pack", price: 14, store: "Hot Sox", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Fun", brand: "Hot Sox" },
-    { name: "Sock It To Me Crew", price: 11, store: "Sock It To Me", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Quirky", brand: "Sock It To Me" },
-    { name: "Happy Socks x Pop Art", price: 16, store: "Happy Socks", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=400&fit=crop", url: "https://amazon.com/?tag=sockninja-20", tag: "Art Edition", brand: "Happy Socks" },
+    { name: "Happy Socks Gift Box 4-Pack", price: 46, store: "Happy Socks", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Gift Ready", brand: "Happy Socks" },
+    { name: "Stance Butter Blend", price: 18, store: "Stance", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Premium", brand: "Stance" },
+    { name: "Odd Sox Novelty Crew", price: 12, store: "Odd Sox", img: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Statement", brand: "Odd Sox" },
+    { name: "Hot Sox Novelty Pack", price: 14, store: "Hot Sox", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Fun", brand: "Hot Sox" },
+    { name: "Sock It To Me Crew", price: 11, store: "Sock It To Me", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Quirky", brand: "Sock It To Me" },
+    { name: "Happy Socks x Pop Art", price: 16, store: "Happy Socks", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&h=600&fit=crop&q=90", url: "https://amazon.com/?tag=sockninja-20", tag: "Art Edition", brand: "Happy Socks" },
   ],
 };
 
 const SOCK_IMAGES = {
-  "no-show": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=700&h=350&fit=crop",
-  "ankle": "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=700&h=350&fit=crop",
-  "crew": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&h=350&fit=crop",
-  "dress": "https://images.unsplash.com/photo-1507679799987-w=700&h=350&fit=crop",
-  "athletic": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=700&h=350&fit=crop",
-  "fun": "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=700&h=350&fit=crop",
+  "no-show": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=1400&h=700&fit=crop&q=90",
+  "ankle": "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=1400&h=700&fit=crop&q=90",
+  "crew": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&h=700&fit=crop&q=90",
+  "dress": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1400&h=700&fit=crop&q=90",
+  "athletic": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1400&h=700&fit=crop&q=90",
+  "fun": "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=1400&h=700&fit=crop&q=90",
 };
 
 const STYLE_OPTIONS = {
   top: [
-    { label: "Suit & Tie", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&h=300&fit=crop" },
-    { label: "Dress Shirt", img: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=300&h=300&fit=crop" },
-    { label: "Button-down Casual", img: "https://images.unsplash.com/photo-1594938298603-c8148c4b4de0?w=300&h=300&fit=crop" },
-    { label: "Polo", img: "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?w=300&h=300&fit=crop" },
-    { label: "Crewneck Sweater", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=300&fit=crop" },
-    { label: "Turtleneck", img: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=300&h=300&fit=crop" },
-    { label: "Hoodie", img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=300&h=300&fit=crop" },
-    { label: "Graphic Tee", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=300&h=300&fit=crop" },
-    { label: "Plain Tee", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" },
-    { label: "Blazer", img: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?w=300&h=300&fit=crop" },
-    { label: "Cardigan", img: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=300&fit=crop" },
+    { label: "Suit & Tie", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=600&fit=crop&q=90" },
+    { label: "Dress Shirt", img: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&h=600&fit=crop&q=90" },
+    { label: "Button-down Casual", img: "https://images.unsplash.com/photo-1594938298603-c8148c4b4de0?w=600&h=600&fit=crop&q=90" },
+    { label: "Polo", img: "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?w=600&h=600&fit=crop&q=90" },
+    { label: "Crewneck Sweater", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=600&fit=crop&q=90" },
+    { label: "Turtleneck", img: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&h=600&fit=crop&q=90" },
+    { label: "Hoodie", img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&h=600&fit=crop&q=90" },
+    { label: "Graphic Tee", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=600&fit=crop&q=90" },
+    { label: "Plain Tee", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop&q=90" },
+    { label: "Blazer", img: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?w=600&h=600&fit=crop&q=90" },
+    { label: "Cardigan", img: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=600&fit=crop&q=90" },
   ],
   bottom: [
-    { label: "Formal Trousers", img: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=300&h=300&fit=crop" },
-    { label: "Chinos / Slacks", img: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=300&h=300&fit=crop" },
-    { label: "Dark Jeans", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300&h=300&fit=crop" },
-    { label: "Light Jeans", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=300&h=300&fit=crop" },
-    { label: "Shorts", img: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=300&h=300&fit=crop" },
-    { label: "Joggers", img: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=300&h=300&fit=crop" },
-    { label: "Skirt / Dress", img: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=300&h=300&fit=crop" },
+    { label: "Formal Trousers", img: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=600&h=600&fit=crop&q=90" },
+    { label: "Chinos / Slacks", img: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=600&fit=crop&q=90" },
+    { label: "Dark Jeans", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=600&fit=crop&q=90" },
+    { label: "Light Jeans", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&h=600&fit=crop&q=90" },
+    { label: "Shorts", img: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&h=600&fit=crop&q=90" },
+    { label: "Joggers", img: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&h=600&fit=crop&q=90" },
+    { label: "Skirt / Dress", img: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&h=600&fit=crop&q=90" },
   ],
   shoes: [
-    { label: "Oxford / Derby", img: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=300&h=300&fit=crop" },
-    { label: "Loafers", img: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=300&h=300&fit=crop" },
-    { label: "Chelsea Boots", img: "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=300&h=300&fit=crop" },
-    { label: "Ankle Boots", img: "https://images.unsplash.com/photo-1542838686-b8a8a5b92b22?w=300&h=300&fit=crop" },
-    { label: "Clean Sneakers", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=300&h=300&fit=crop" },
-    { label: "Bold Sneakers", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" },
-    { label: "Running Shoes", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=300&fit=crop" },
-    { label: "Sandals", img: "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=300&h=300&fit=crop" },
-    { label: "Boat Shoes", img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=300&fit=crop" },
-    { label: "Heels / Flats", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=300&fit=crop" },
+    { label: "Oxford / Derby", img: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&h=600&fit=crop&q=90" },
+    { label: "Loafers", img: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&h=600&fit=crop&q=90" },
+    { label: "Chelsea Boots", img: "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&h=600&fit=crop&q=90" },
+    { label: "Ankle Boots", img: "https://images.unsplash.com/photo-1542838686-b8a8a5b92b22?w=600&h=600&fit=crop&q=90" },
+    { label: "Clean Sneakers", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=600&fit=crop&q=90" },
+    { label: "Bold Sneakers", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&q=90" },
+    { label: "Running Shoes", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop&q=90" },
+    { label: "Sandals", img: "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=600&fit=crop&q=90" },
+    { label: "Boat Shoes", img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&h=600&fit=crop&q=90" },
+    { label: "Heels / Flats", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=600&fit=crop&q=90" },
   ],
   occasion: [
-    { label: "Work / Office", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=300&fit=crop" },
-    { label: "Formal Event", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=300&h=300&fit=crop" },
-    { label: "Casual Hangout", img: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=300&h=300&fit=crop" },
-    { label: "Date Night", img: "https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=300&h=300&fit=crop" },
-    { label: "Gym / Sports", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300&h=300&fit=crop" },
-    { label: "Travel", img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop" },
-    { label: "Wedding / Gala", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop" },
+    { label: "Work / Office", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=600&fit=crop&q=90" },
+    { label: "Formal Event", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=600&fit=crop&q=90" },
+    { label: "Casual Hangout", img: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=600&fit=crop&q=90" },
+    { label: "Date Night", img: "https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=600&h=600&fit=crop&q=90" },
+    { label: "Gym / Sports", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=600&fit=crop&q=90" },
+    { label: "Travel", img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=600&fit=crop&q=90" },
+    { label: "Wedding / Gala", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop&q=90" },
   ],
 };
 
@@ -117,13 +117,23 @@ const stepMeta = [
 
 function PhotoOption({ option, selected, color, onClick }) {
   return (
-    <div onClick={onClick} style={{ cursor: "pointer", borderRadius: 14, overflow: "hidden", border: selected ? `3px solid ${color}` : "3px solid transparent", boxShadow: selected ? `0 0 20px ${color}66` : "0 2px 8px rgba(0,0,0,0.3)", transition: "all 0.2s", transform: selected ? "scale(1.04)" : "scale(1)", background: "#1a1a2e", position: "relative" }}>
-      <div style={{ position: "relative", paddingBottom: "80%", overflow: "hidden" }}>
-        <img src={option.img} alt={option.label} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s", filter: selected ? "brightness(1.1)" : "brightness(0.75)" }} />
-        {selected && <div style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, borderRadius: "50%", background: color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, color: "#000" }}>✓</div>}
+    <div onClick={onClick} style={{ cursor: "pointer", borderRadius: 14, overflow: "hidden", border: selected ? `3px solid ${color}` : "3px solid transparent", boxShadow: selected ? `0 0 24px ${color}88` : "0 2px 12px rgba(0,0,0,0.4)", transition: "all 0.2s", transform: selected ? "scale(1.05)" : "scale(1)", background: "#1a1a2e", position: "relative" }}>
+      <div style={{ position: "relative", paddingBottom: "100%", overflow: "hidden" }}>
+        <img
+          src={option.img}
+          alt={option.label}
+          loading="lazy"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease, filter 0.3s ease", filter: selected ? "brightness(1.05) saturate(1.1)" : "brightness(0.8) saturate(0.9)" }}
+          onMouseEnter={e => { if (!selected) e.target.style.filter = "brightness(1) saturate(1)"; }}
+          onMouseLeave={e => { if (!selected) e.target.style.filter = "brightness(0.8) saturate(0.9)"; }}
+        />
+        {selected && (
+          <div style={{ position: "absolute", top: 8, right: 8, width: 26, height: 26, borderRadius: "50%", background: color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#000", boxShadow: `0 0 12px ${color}` }}>✓</div>
+        )}
+        <div style={{ position: "absolute", inset: 0, background: selected ? `linear-gradient(to top, ${color}33 0%, transparent 60%)` : "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)" }} />
       </div>
-      <div style={{ padding: "8px 10px", background: selected ? `${color}22` : "rgba(255,255,255,0.05)", borderTop: selected ? `1px solid ${color}44` : "1px solid rgba(255,255,255,0.08)" }}>
-        <span style={{ fontSize: 12, color: selected ? color : "rgba(255,255,255,0.8)", fontWeight: selected ? 700 : 500, lineHeight: 1.2, display: "block", textAlign: "center" }}>{option.label}</span>
+      <div style={{ padding: "10px 12px", background: selected ? `${color}22` : "rgba(255,255,255,0.04)", borderTop: selected ? `1px solid ${color}55` : "1px solid rgba(255,255,255,0.07)" }}>
+        <span style={{ fontSize: 12, color: selected ? color : "rgba(255,255,255,0.85)", fontWeight: selected ? 700 : 500, lineHeight: 1.2, display: "block", textAlign: "center" }}>{option.label}</span>
       </div>
     </div>
   );
@@ -132,25 +142,15 @@ function PhotoOption({ option, selected, color, onClick }) {
 function ShopSection({ products }) {
   const [priceFilter, setPriceFilter] = useState("all");
   const [brandFilter, setBrandFilter] = useState("all");
-
   const brands = ["all", ...new Set(products.map(p => p.brand))];
-
   const filtered = products.filter(p => {
     const priceOk = priceFilter === "all" || (priceFilter === "budget" && p.price < 20) || (priceFilter === "mid" && p.price >= 20 && p.price < 35) || (priceFilter === "premium" && p.price >= 35);
     const brandOk = brandFilter === "all" || p.brand === brandFilter;
     return priceOk && brandOk;
   });
-
   const filterBtn = (active, label, onClick) => (
-    <button onClick={onClick} style={{
-      padding: "6px 14px", borderRadius: 50, fontSize: 12, cursor: "pointer", fontWeight: 600,
-      background: active ? "#FFD93D" : "rgba(255,255,255,0.08)",
-      color: active ? "#000" : "rgba(255,255,255,0.6)",
-      border: active ? "2px solid #FFD93D" : "2px solid rgba(255,255,255,0.12)",
-      transition: "all 0.15s", whiteSpace: "nowrap",
-    }}>{label}</button>
+    <button onClick={onClick} style={{ padding: "6px 14px", borderRadius: 50, fontSize: 12, cursor: "pointer", fontWeight: 600, background: active ? "#FFD93D" : "rgba(255,255,255,0.08)", color: active ? "#000" : "rgba(255,255,255,0.6)", border: active ? "2px solid #FFD93D" : "2px solid rgba(255,255,255,0.12)", transition: "all 0.15s", whiteSpace: "nowrap" }}>{label}</button>
   );
-
   return (
     <div style={{ marginBottom: 16 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
@@ -158,56 +158,50 @@ function ShopSection({ products }) {
         <span style={{ fontSize: 11, letterSpacing: "3px", color: "rgba(255,255,255,0.3)", textTransform: "uppercase", whiteSpace: "nowrap", fontWeight: 600 }}>🛍️ Shop The Look</span>
         <div style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.1)" }} />
       </div>
-
-      {/* Price filter */}
       <div style={{ marginBottom: 10 }}>
         <p style={{ fontSize: 10, color: "rgba(255,255,255,0.3)", letterSpacing: "2px", textTransform: "uppercase", marginBottom: 8 }}>Price</p>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {filterBtn(priceFilter === "all", "All", () => setPriceFilter("all"))}
-          {filterBtn(priceFilter === "budget", "Budget (under $20)", () => setPriceFilter("budget"))}
-          {filterBtn(priceFilter === "mid", "Mid ($20–$35)", () => setPriceFilter("mid"))}
-          {filterBtn(priceFilter === "premium", "Premium ($35+)", () => setPriceFilter("premium"))}
+          {filterBtn(priceFilter === "budget", "Under $20", () => setPriceFilter("budget"))}
+          {filterBtn(priceFilter === "mid", "$20–$35", () => setPriceFilter("mid"))}
+          {filterBtn(priceFilter === "premium", "$35+", () => setPriceFilter("premium"))}
         </div>
       </div>
-
-      {/* Brand filter */}
       <div style={{ marginBottom: 16 }}>
         <p style={{ fontSize: 10, color: "rgba(255,255,255,0.3)", letterSpacing: "2px", textTransform: "uppercase", marginBottom: 8 }}>Brand</p>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {brands.map(b => filterBtn(brandFilter === b, b === "all" ? "All Brands" : b, () => setBrandFilter(b)))}
         </div>
       </div>
-
-      {/* Product grid */}
       {filtered.length === 0 ? (
-        <div style={{ textAlign: "center", padding: "32px", color: "rgba(255,255,255,0.3)", fontSize: 14 }}>
-          No products match this filter. Try a different combination.
-        </div>
+        <div style={{ textAlign: "center", padding: "32px", color: "rgba(255,255,255,0.3)", fontSize: 14 }}>No products match this filter.</div>
       ) : (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14 }}>
           {filtered.map((p, i) => (
-            <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", borderRadius: 16, overflow: "hidden", background: "rgba(255,255,255,0.05)", border: "2px solid rgba(255,255,255,0.1)", transition: "all 0.25s", display: "block" }}
-              onMouseEnter={e => { e.currentTarget.style.border = "2px solid #FFD93D"; e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(255,217,61,0.2)"; }}
+            <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", borderRadius: 18, overflow: "hidden", background: "rgba(255,255,255,0.05)", border: "2px solid rgba(255,255,255,0.1)", transition: "all 0.25s", display: "block" }}
+              onMouseEnter={e => { e.currentTarget.style.border = "2px solid #FFD93D"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(255,217,61,0.25)"; }}
               onMouseLeave={e => { e.currentTarget.style.border = "2px solid rgba(255,255,255,0.1)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
-              <div style={{ position: "relative", paddingBottom: "70%", overflow: "hidden" }}>
-                <img src={p.img} alt={p.name} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s" }} />
-                <div style={{ position: "absolute", top: 8, left: 8, background: "rgba(0,0,0,0.7)", borderRadius: 20, padding: "3px 10px", fontSize: 10, color: "#6BCB77", fontWeight: 700, border: "1px solid rgba(107,203,119,0.3)" }}>{p.tag}</div>
+              <div style={{ position: "relative", paddingBottom: "75%", overflow: "hidden" }}>
+                <img src={p.img} alt={p.name} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }}
+                  onMouseEnter={e => e.target.style.transform = "scale(1.06)"}
+                  onMouseLeave={e => e.target.style.transform = "scale(1)"} />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)" }} />
+                <div style={{ position: "absolute", top: 10, left: 10, background: "rgba(0,0,0,0.75)", borderRadius: 20, padding: "4px 12px", fontSize: 10, color: "#6BCB77", fontWeight: 700, border: "1px solid rgba(107,203,119,0.4)", backdropFilter: "blur(8px)" }}>{p.tag}</div>
               </div>
-              <div style={{ padding: "12px 14px" }}>
-                <div style={{ fontSize: 13, color: "#fff", fontWeight: 600, marginBottom: 6, lineHeight: 1.3 }}>{p.name}</div>
+              <div style={{ padding: "14px 16px" }}>
+                <div style={{ fontSize: 13, color: "#fff", fontWeight: 600, marginBottom: 8, lineHeight: 1.4 }}>{p.name}</div>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <div>
-                    <span style={{ fontSize: 18, color: "#FFD93D", fontWeight: 800 }}>${p.price}</span>
-                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", marginLeft: 6 }}>{p.store}</span>
+                    <span style={{ fontSize: 20, color: "#FFD93D", fontWeight: 800 }}>${p.price}</span>
+                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", marginLeft: 6 }}>{p.store}</span>
                   </div>
-                  <span style={{ fontSize: 12, color: "#FFD93D", fontWeight: 700, background: "rgba(255,217,61,0.1)", padding: "4px 10px", borderRadius: 20, border: "1px solid rgba(255,217,61,0.2)" }}>Buy →</span>
+                  <span style={{ fontSize: 12, color: "#FFD93D", fontWeight: 700, background: "rgba(255,217,61,0.12)", padding: "5px 12px", borderRadius: 20, border: "1px solid rgba(255,217,61,0.25)" }}>Buy →</span>
                 </div>
               </div>
             </a>
           ))}
         </div>
       )}
-
       <p style={{ fontSize: 11, color: "rgba(255,255,255,0.2)", textAlign: "center", marginTop: 12 }}>↑ Affiliate links — we earn a small commission at no cost to you</p>
     </div>
   );
@@ -244,9 +238,7 @@ export default function SockNinja() {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(0);
   const [showShare, setShowShare] = useState(false);
-  const [usesLeft, setUsesLeft] = useState(() => {
-    try { return parseInt(localStorage.getItem("sockNinjaUses") || "3"); } catch { return 3; }
-  });
+  const [usesLeft, setUsesLeft] = useState(() => { try { return parseInt(localStorage.getItem("sockNinjaUses") || "3"); } catch { return 3; } });
   const resultRef = useRef(null);
 
   const pickProducts = (sockType) => {
@@ -278,9 +270,7 @@ export default function SockNinja() {
       } else {
         setResult({ error: true, headline: "Style malfunction 😅", primaryRecommendation: "Something went wrong. Try again!" });
       }
-    } catch {
-      setResult({ error: true, headline: "Style malfunction 😅", primaryRecommendation: "Something went wrong. Try again!" });
-    }
+    } catch { setResult({ error: true, headline: "Style malfunction 😅", primaryRecommendation: "Something went wrong. Try again!" }); }
     setLoading(false);
   };
 
@@ -304,7 +294,6 @@ export default function SockNinja() {
         .dot2 { animation: pulse 1.2s ease-in-out 0.2s infinite; }
         .dot3 { animation: pulse 1.2s ease-in-out 0.4s infinite; }
         .gradient-text { background: linear-gradient(90deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF); background-size: 300% 300%; animation: gradientShift 4s ease infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .photo-option:hover img { transform: scale(1.08); filter: brightness(0.9) !important; }
       `}</style>
 
       <div style={{ position: "fixed", top: -100, right: -100, width: 400, height: 400, background: "radial-gradient(circle, rgba(255,107,107,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
@@ -349,8 +338,8 @@ export default function SockNinja() {
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: `${currentColor}22`, border: `2px solid ${currentColor}44`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{stepMeta[step].icon}</div>
                 <h2 style={{ fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "'Syne', sans-serif" }}>{stepMeta[step].label}</h2>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
-                {STYLE_OPTIONS[steps[step]].map(opt => (<div key={opt.label} className="photo-option"><PhotoOption option={opt} selected={selections[steps[step]] === opt.label} color={currentColor} onClick={() => select(steps[step], opt.label)} /></div>))}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+                {STYLE_OPTIONS[steps[step]].map(opt => (<PhotoOption key={opt.label} option={opt} selected={selections[steps[step]] === opt.label} color={currentColor} onClick={() => select(steps[step], opt.label)} />))}
               </div>
             </div>
             {allSelected && (
@@ -378,23 +367,23 @@ export default function SockNinja() {
             <div style={{ background: "linear-gradient(135deg, rgba(255,107,107,0.1), rgba(77,150,255,0.1))", border: "2px solid rgba(255,255,255,0.15)", borderRadius: 24, overflow: "hidden", marginBottom: 16 }}>
               {SOCK_IMAGES[result.sockType] && (
                 <div style={{ position: "relative" }}>
-                  <img src={SOCK_IMAGES[result.sockType]} alt={result.sockType} style={{ width: "100%", height: 200, objectFit: "cover", display: "block", filter: "brightness(0.7)" }} />
-                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,12,41,0.95) 0%, transparent 60%)" }} />
-                  <div style={{ position: "absolute", bottom: 16, left: 24, right: 24, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <img src={SOCK_IMAGES[result.sockType]} alt={result.sockType} style={{ width: "100%", height: 220, objectFit: "cover", display: "block", filter: "brightness(0.65) saturate(1.2)" }} />
+                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,12,41,0.97) 0%, rgba(15,12,41,0.3) 60%, transparent 100%)" }} />
+                  <div style={{ position: "absolute", bottom: 20, left: 28, right: 28, display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
                     <div>
-                      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", letterSpacing: "3px", textTransform: "uppercase", marginBottom: 4 }}>Recommended Style</div>
-                      <div style={{ fontSize: 22, fontFamily: "'Syne', sans-serif", fontWeight: 800, color: "#FFD93D", textTransform: "capitalize" }}>{result.sockType} Socks</div>
+                      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", letterSpacing: "3px", textTransform: "uppercase", marginBottom: 6 }}>Recommended Style</div>
+                      <div style={{ fontSize: 26, fontFamily: "'Syne', sans-serif", fontWeight: 800, color: "#FFD93D", textTransform: "capitalize", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>{result.sockType} Socks</div>
                     </div>
-                    {result.confidenceLevel && (<span style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", padding: "6px 14px", borderRadius: 50, background: `${confidenceColors[result.confidenceLevel]}33`, color: confidenceColors[result.confidenceLevel], border: `1.5px solid ${confidenceColors[result.confidenceLevel]}66`, fontWeight: 700 }}>{result.confidenceLevel}</span>)}
+                    {result.confidenceLevel && (<span style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: 50, background: `${confidenceColors[result.confidenceLevel]}33`, color: confidenceColors[result.confidenceLevel], border: `1.5px solid ${confidenceColors[result.confidenceLevel]}66`, fontWeight: 700, backdropFilter: "blur(8px)" }}>{result.confidenceLevel}</span>)}
                   </div>
                 </div>
               )}
               <div style={{ padding: "24px 28px 28px" }}>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
-                  <span style={{ fontSize: 36 }}>{result.sockEmoji}</span>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 14 }}>
+                  <span style={{ fontSize: 40 }}>{result.sockEmoji}</span>
                   <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: 800, color: "#fff", lineHeight: 1.2 }}>{result.headline}</h2>
                 </div>
-                <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 15, lineHeight: 1.75, marginBottom: 20 }}>{result.primaryRecommendation}</p>
+                <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 15, lineHeight: 1.8, marginBottom: 20 }}>{result.primaryRecommendation}</p>
                 {result.tiktokCaption && (
                   <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, padding: "12px 16px" }}>
                     <span style={{ fontSize: 10, color: "#FFD93D", letterSpacing: "2px", textTransform: "uppercase", fontWeight: 700 }}>🎵 TikTok Caption</span>
@@ -407,18 +396,18 @@ export default function SockNinja() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
               <div style={{ background: "rgba(107,203,119,0.08)", border: "2px solid rgba(107,203,119,0.2)", borderRadius: 16, padding: "20px 18px" }}>
                 <h3 style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", color: "#6BCB77", marginBottom: 14, fontWeight: 700 }}>✓ Go For It</h3>
-                {result.doThis?.map((item, i) => (<div key={i} style={{ display: "flex", gap: 8, marginBottom: 10 }}><span style={{ color: "#6BCB77", fontSize: 14, flexShrink: 0 }}>→</span><span style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.5 }}>{item}</span></div>))}
+                {result.doThis?.map((item, i) => (<div key={i} style={{ display: "flex", gap: 8, marginBottom: 10 }}><span style={{ color: "#6BCB77", fontSize: 14, flexShrink: 0 }}>→</span><span style={{ color: "rgba(255,255,255,0.75)", fontSize: 13, lineHeight: 1.5 }}>{item}</span></div>))}
               </div>
               <div style={{ background: "rgba(255,107,107,0.08)", border: "2px solid rgba(255,107,107,0.2)", borderRadius: 16, padding: "20px 18px" }}>
                 <h3 style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", color: "#FF6B6B", marginBottom: 14, fontWeight: 700 }}>✗ Avoid</h3>
-                {result.avoidThis?.map((item, i) => (<div key={i} style={{ display: "flex", gap: 8, marginBottom: 10 }}><span style={{ color: "#FF6B6B", fontSize: 14, flexShrink: 0 }}>×</span><span style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, lineHeight: 1.5 }}>{item}</span></div>))}
+                {result.avoidThis?.map((item, i) => (<div key={i} style={{ display: "flex", gap: 8, marginBottom: 10 }}><span style={{ color: "#FF6B6B", fontSize: 14, flexShrink: 0 }}>×</span><span style={{ color: "rgba(255,255,255,0.65)", fontSize: 13, lineHeight: 1.5 }}>{item}</span></div>))}
               </div>
             </div>
 
             {result.boldMove && (
               <div style={{ background: "linear-gradient(135deg, rgba(255,217,61,0.1), rgba(255,107,107,0.1))", border: "2px solid rgba(255,217,61,0.3)", borderRadius: 16, padding: "20px 24px", marginBottom: 16 }}>
                 <h3 style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", color: "#FFD93D", marginBottom: 8, fontWeight: 700 }}>⚡ Bold Move</h3>
-                <p style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, lineHeight: 1.65 }}>{result.boldMove}</p>
+                <p style={{ color: "rgba(255,255,255,0.85)", fontSize: 14, lineHeight: 1.7 }}>{result.boldMove}</p>
               </div>
             )}
 
