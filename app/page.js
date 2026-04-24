@@ -34,11 +34,51 @@ const AFFILIATE_PRODUCTS = {
   ],
 };
 
+// Photo options with Unsplash images for each category
 const STYLE_OPTIONS = {
-  top: ["Suit & Tie", "Dress Shirt", "Button-down Casual", "Polo", "Crewneck Sweater", "Turtleneck", "Hoodie", "Graphic Tee", "Plain Tee", "Blazer", "Cardigan"],
-  bottom: ["Formal Trousers", "Chinos / Slacks", "Dark Jeans", "Light Jeans", "Shorts", "Joggers", "Skirt / Dress"],
-  shoes: ["Oxford / Derby", "Loafers", "Chelsea Boots", "Ankle Boots", "Clean Sneakers", "Bold Sneakers", "Running Shoes", "Sandals", "Boat Shoes", "Heels / Flats"],
-  occasion: ["Work / Office", "Formal Event", "Casual Hangout", "Date Night", "Gym / Sports", "Travel", "Wedding / Gala"],
+  top: [
+    { label: "Suit & Tie", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&h=300&fit=crop" },
+    { label: "Dress Shirt", img: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=300&h=300&fit=crop" },
+    { label: "Button-down Casual", img: "https://images.unsplash.com/photo-1594938298603-c8148c4b4de0?w=300&h=300&fit=crop" },
+    { label: "Polo", img: "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?w=300&h=300&fit=crop" },
+    { label: "Crewneck Sweater", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=300&fit=crop" },
+    { label: "Turtleneck", img: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=300&h=300&fit=crop" },
+    { label: "Hoodie", img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=300&h=300&fit=crop" },
+    { label: "Graphic Tee", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=300&h=300&fit=crop" },
+    { label: "Plain Tee", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" },
+    { label: "Blazer", img: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?w=300&h=300&fit=crop" },
+    { label: "Cardigan", img: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=300&fit=crop" },
+  ],
+  bottom: [
+    { label: "Formal Trousers", img: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=300&h=300&fit=crop" },
+    { label: "Chinos / Slacks", img: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=300&h=300&fit=crop" },
+    { label: "Dark Jeans", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300&h=300&fit=crop" },
+    { label: "Light Jeans", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=300&h=300&fit=crop" },
+    { label: "Shorts", img: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=300&h=300&fit=crop" },
+    { label: "Joggers", img: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=300&h=300&fit=crop" },
+    { label: "Skirt / Dress", img: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=300&h=300&fit=crop" },
+  ],
+  shoes: [
+    { label: "Oxford / Derby", img: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=300&h=300&fit=crop" },
+    { label: "Loafers", img: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=300&h=300&fit=crop" },
+    { label: "Chelsea Boots", img: "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=300&h=300&fit=crop" },
+    { label: "Ankle Boots", img: "https://images.unsplash.com/photo-1542838686-b8a8a5b92b22?w=300&h=300&fit=crop" },
+    { label: "Clean Sneakers", img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=300&h=300&fit=crop" },
+    { label: "Bold Sneakers", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" },
+    { label: "Running Shoes", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=300&fit=crop" },
+    { label: "Sandals", img: "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=300&h=300&fit=crop" },
+    { label: "Boat Shoes", img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=300&fit=crop" },
+    { label: "Heels / Flats", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=300&fit=crop" },
+  ],
+  occasion: [
+    { label: "Work / Office", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=300&fit=crop" },
+    { label: "Formal Event", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=300&h=300&fit=crop" },
+    { label: "Casual Hangout", img: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=300&h=300&fit=crop" },
+    { label: "Date Night", img: "https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=300&h=300&fit=crop" },
+    { label: "Gym / Sports", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300&h=300&fit=crop" },
+    { label: "Travel", img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop" },
+    { label: "Wedding / Gala", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop" },
+  ],
 };
 
 const steps = ["top", "bottom", "shoes", "occasion"];
@@ -48,6 +88,40 @@ const stepMeta = [
   { label: "What shoes are you wearing?", icon: "👟", color: "#6BCB77" },
   { label: "What's the occasion?", icon: "📍", color: "#4D96FF" },
 ];
+
+function PhotoOption({ option, selected, color, onClick }) {
+  return (
+    <div onClick={onClick} style={{
+      cursor: "pointer", borderRadius: 14, overflow: "hidden",
+      border: selected ? `3px solid ${color}` : "3px solid transparent",
+      boxShadow: selected ? `0 0 20px ${color}66` : "0 2px 8px rgba(0,0,0,0.3)",
+      transition: "all 0.2s", transform: selected ? "scale(1.04)" : "scale(1)",
+      background: "#1a1a2e", position: "relative",
+    }}>
+      <div style={{ position: "relative", paddingBottom: "80%", overflow: "hidden" }}>
+        <img src={option.img} alt={option.label} style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%",
+          objectFit: "cover", transition: "transform 0.3s",
+          filter: selected ? "brightness(1.1)" : "brightness(0.75)",
+        }} />
+        {selected && (
+          <div style={{
+            position: "absolute", top: 6, right: 6, width: 22, height: 22,
+            borderRadius: "50%", background: color, display: "flex",
+            alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, color: "#000",
+          }}>✓</div>
+        )}
+      </div>
+      <div style={{
+        padding: "8px 10px",
+        background: selected ? `${color}22` : "rgba(255,255,255,0.05)",
+        borderTop: selected ? `1px solid ${color}44` : "1px solid rgba(255,255,255,0.08)",
+      }}>
+        <span style={{ fontSize: 12, color: selected ? color : "rgba(255,255,255,0.8)", fontWeight: selected ? 700 : 500, lineHeight: 1.2, display: "block", textAlign: "center" }}>{option.label}</span>
+      </div>
+    </div>
+  );
+}
 
 function ProductCard({ product }) {
   return (
@@ -125,7 +199,7 @@ export default function SockNinja() {
   const select = (key, val) => {
     const updated = { ...selections, [key]: val };
     setSelections(updated);
-    if (step < steps.length - 1) setTimeout(() => setStep(step + 1), 280);
+    if (step < steps.length - 1) setTimeout(() => setStep(step + 1), 350);
   };
 
   const getAdvice = async () => {
@@ -181,15 +255,16 @@ export default function SockNinja() {
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
+        .photo-option:hover img { transform: scale(1.08); }
       `}</style>
 
       <div style={{ position: "fixed", top: -100, right: -100, width: 400, height: 400, background: "radial-gradient(circle, rgba(255,107,107,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
       <div style={{ position: "fixed", bottom: -100, left: -100, width: 400, height: 400, background: "radial-gradient(circle, rgba(77,150,255,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
 
-      <div style={{ maxWidth: 680, margin: "0 auto", padding: "52px 20px 100px", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "52px 20px 100px", position: "relative", zIndex: 1 }}>
 
         {/* HEADER */}
-        <div style={{ textAlign: "center", marginBottom: 52 }} className="fade-up">
+        <div style={{ textAlign: "center", marginBottom: 48 }} className="fade-up">
           <div className="float" style={{ fontSize: 64, marginBottom: 16, display: "inline-block" }}>🥷🧦</div>
           <h1 className="gradient-text" style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(40px, 8vw, 72px)", fontWeight: 800, letterSpacing: "-2px", lineHeight: 1, marginBottom: 12 }}>
             Sock Ninja
@@ -208,6 +283,7 @@ export default function SockNinja() {
         {/* SELECTOR */}
         {!result && (
           <div>
+            {/* Progress */}
             <div style={{ display: "flex", gap: 6, marginBottom: 32 }}>
               {steps.map((s, i) => (
                 <div key={s} style={{ flex: 1, height: 4, borderRadius: 2, background: i <= step ? stepMeta[i].color : "rgba(255,255,255,0.1)", transition: "background 0.4s", cursor: i < step ? "pointer" : "default", boxShadow: i <= step ? `0 0 8px ${stepMeta[i].color}` : "none" }}
@@ -215,44 +291,50 @@ export default function SockNinja() {
               ))}
             </div>
 
-            <div style={{ marginBottom: 16 }}>
-              {steps.slice(0, step).map((s, i) => (
-                selections[s] && (
-                  <div key={s} className="fade-up" onClick={() => setStep(i)} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 18px", marginBottom: 8, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, cursor: "pointer", transition: "all 0.2s" }}
-                    onMouseEnter={e => { e.currentTarget.style.borderColor = stepMeta[i].color; }}
-                    onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; }}>
-                    <span style={{ fontSize: 18 }}>{stepMeta[i].icon}</span>
-                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", textTransform: "uppercase", letterSpacing: "2px", width: 60 }}>{s}</span>
-                    <span style={{ fontSize: 14, color: stepMeta[i].color, fontWeight: 600 }}>{selections[s]}</span>
-                    <span style={{ marginLeft: "auto", fontSize: 10, color: "rgba(255,255,255,0.2)", letterSpacing: "1px" }}>EDIT</span>
-                  </div>
-                )
-              ))}
-            </div>
-
-            <div className="fade-up" key={step} style={{ background: "rgba(255,255,255,0.05)", border: `2px solid ${currentColor}44`, borderRadius: 20, padding: "28px 24px", marginBottom: 20, boxShadow: `0 0 40px ${currentColor}15` }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 22 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: `${currentColor}22`, border: `2px solid ${currentColor}44`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{stepMeta[step].icon}</div>
-                <h2 style={{ fontSize: 18, fontWeight: 600, color: "#fff", fontFamily: "'Syne', sans-serif" }}>{stepMeta[step].label}</h2>
+            {/* Past selections summary */}
+            {step > 0 && (
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
+                {steps.slice(0, step).map((s, i) => (
+                  selections[s] && (
+                    <div key={s} onClick={() => setStep(i)} style={{
+                      display: "flex", alignItems: "center", gap: 8, padding: "6px 14px",
+                      background: "rgba(255,255,255,0.06)", border: `1px solid ${stepMeta[i].color}44`,
+                      borderRadius: 50, cursor: "pointer", transition: "all 0.2s",
+                    }}
+                      onMouseEnter={e => e.currentTarget.style.borderColor = stepMeta[i].color}
+                      onMouseLeave={e => e.currentTarget.style.borderColor = `${stepMeta[i].color}44`}>
+                      <span style={{ fontSize: 14 }}>{stepMeta[i].icon}</span>
+                      <span style={{ fontSize: 12, color: stepMeta[i].color, fontWeight: 600 }}>{selections[s]}</span>
+                      <span style={{ fontSize: 10, color: "rgba(255,255,255,0.2)" }}>✕</span>
+                    </div>
+                  )
+                ))}
               </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            )}
+
+            {/* Current step */}
+            <div className="fade-up" key={step} style={{ background: "rgba(255,255,255,0.04)", border: `2px solid ${currentColor}33`, borderRadius: 20, padding: "24px 20px", marginBottom: 20, boxShadow: `0 0 40px ${currentColor}10` }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: `${currentColor}22`, border: `2px solid ${currentColor}44`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{stepMeta[step].icon}</div>
+                <h2 style={{ fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "'Syne', sans-serif" }}>{stepMeta[step].label}</h2>
+              </div>
+
+              {/* Photo Grid */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
                 {STYLE_OPTIONS[steps[step]].map(opt => (
-                  <button key={opt} onClick={() => select(steps[step], opt)} style={{
-                    padding: "9px 16px",
-                    background: selections[steps[step]] === opt ? currentColor : "rgba(255,255,255,0.08)",
-                    color: selections[steps[step]] === opt ? "#000" : "rgba(255,255,255,0.7)",
-                    border: `1.5px solid ${selections[steps[step]] === opt ? currentColor : "rgba(255,255,255,0.12)"}`,
-                    borderRadius: 50, cursor: "pointer", fontSize: 13,
-                    transition: "all 0.15s", fontWeight: selections[steps[step]] === opt ? 700 : 400,
-                    boxShadow: selections[steps[step]] === opt ? `0 0 15px ${currentColor}66` : "none",
-                  }}
-                    onMouseEnter={e => { if (selections[steps[step]] !== opt) { e.currentTarget.style.borderColor = currentColor; e.currentTarget.style.color = "#fff"; e.currentTarget.style.background = `${currentColor}22`; } }}
-                    onMouseLeave={e => { if (selections[steps[step]] !== opt) { e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; e.currentTarget.style.color = "rgba(255,255,255,0.7)"; e.currentTarget.style.background = "rgba(255,255,255,0.08)"; } }}
-                  >{opt}</button>
+                  <div key={opt.label} className="photo-option">
+                    <PhotoOption
+                      option={opt}
+                      selected={selections[steps[step]] === opt.label}
+                      color={currentColor}
+                      onClick={() => select(steps[step], opt.label)}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
 
+            {/* CTA */}
             {allSelected && (
               <div className="fade-up">
                 {usesLeft > 0 ? (
