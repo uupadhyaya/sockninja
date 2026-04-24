@@ -34,7 +34,15 @@ const AFFILIATE_PRODUCTS = {
   ],
 };
 
-// Photo options with Unsplash images for each category
+const SOCK_IMAGES = {
+  "no-show": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=700&h=350&fit=crop",
+  "ankle": "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=700&h=350&fit=crop",
+  "crew": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&h=350&fit=crop",
+  "dress": "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=700&h=350&fit=crop",
+  "athletic": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=700&h=350&fit=crop",
+  "fun": "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=700&h=350&fit=crop",
+};
+
 const STYLE_OPTIONS = {
   top: [
     { label: "Suit & Tie", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&h=300&fit=crop" },
@@ -255,7 +263,7 @@ export default function SockNinja() {
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
-        .photo-option:hover img { transform: scale(1.08); }
+        .photo-option:hover img { transform: scale(1.08); filter: brightness(0.9) !important; }
       `}</style>
 
       <div style={{ position: "fixed", top: -100, right: -100, width: 400, height: 400, background: "radial-gradient(circle, rgba(255,107,107,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
@@ -283,7 +291,6 @@ export default function SockNinja() {
         {/* SELECTOR */}
         {!result && (
           <div>
-            {/* Progress */}
             <div style={{ display: "flex", gap: 6, marginBottom: 32 }}>
               {steps.map((s, i) => (
                 <div key={s} style={{ flex: 1, height: 4, borderRadius: 2, background: i <= step ? stepMeta[i].color : "rgba(255,255,255,0.1)", transition: "background 0.4s", cursor: i < step ? "pointer" : "default", boxShadow: i <= step ? `0 0 8px ${stepMeta[i].color}` : "none" }}
@@ -291,16 +298,11 @@ export default function SockNinja() {
               ))}
             </div>
 
-            {/* Past selections summary */}
             {step > 0 && (
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
                 {steps.slice(0, step).map((s, i) => (
                   selections[s] && (
-                    <div key={s} onClick={() => setStep(i)} style={{
-                      display: "flex", alignItems: "center", gap: 8, padding: "6px 14px",
-                      background: "rgba(255,255,255,0.06)", border: `1px solid ${stepMeta[i].color}44`,
-                      borderRadius: 50, cursor: "pointer", transition: "all 0.2s",
-                    }}
+                    <div key={s} onClick={() => setStep(i)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 14px", background: "rgba(255,255,255,0.06)", border: `1px solid ${stepMeta[i].color}44`, borderRadius: 50, cursor: "pointer", transition: "all 0.2s" }}
                       onMouseEnter={e => e.currentTarget.style.borderColor = stepMeta[i].color}
                       onMouseLeave={e => e.currentTarget.style.borderColor = `${stepMeta[i].color}44`}>
                       <span style={{ fontSize: 14 }}>{stepMeta[i].icon}</span>
@@ -312,29 +314,20 @@ export default function SockNinja() {
               </div>
             )}
 
-            {/* Current step */}
             <div className="fade-up" key={step} style={{ background: "rgba(255,255,255,0.04)", border: `2px solid ${currentColor}33`, borderRadius: 20, padding: "24px 20px", marginBottom: 20, boxShadow: `0 0 40px ${currentColor}10` }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: `${currentColor}22`, border: `2px solid ${currentColor}44`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{stepMeta[step].icon}</div>
                 <h2 style={{ fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "'Syne', sans-serif" }}>{stepMeta[step].label}</h2>
               </div>
-
-              {/* Photo Grid */}
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
                 {STYLE_OPTIONS[steps[step]].map(opt => (
                   <div key={opt.label} className="photo-option">
-                    <PhotoOption
-                      option={opt}
-                      selected={selections[steps[step]] === opt.label}
-                      color={currentColor}
-                      onClick={() => select(steps[step], opt.label)}
-                    />
+                    <PhotoOption option={opt} selected={selections[steps[step]] === opt.label} color={currentColor} onClick={() => select(steps[step], opt.label)} />
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* CTA */}
             {allSelected && (
               <div className="fade-up">
                 {usesLeft > 0 ? (
@@ -372,21 +365,38 @@ export default function SockNinja() {
         {/* RESULTS */}
         {result && !result.error && (
           <div ref={resultRef} className="fade-up">
-            <div style={{ background: "linear-gradient(135deg, rgba(255,107,107,0.1), rgba(77,150,255,0.1))", border: "2px solid rgba(255,255,255,0.15)", borderRadius: 24, padding: "32px 28px", marginBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 20 }}>
-                <span style={{ fontSize: 48 }}>{result.sockEmoji}</span>
-                {result.confidenceLevel && (
-                  <span style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", padding: "6px 14px", borderRadius: 50, background: `${confidenceColors[result.confidenceLevel]}22`, color: confidenceColors[result.confidenceLevel], border: `1.5px solid ${confidenceColors[result.confidenceLevel]}44`, fontWeight: 700 }}>{result.confidenceLevel}</span>
-                )}
-              </div>
-              <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(22px, 4vw, 32px)", fontWeight: 800, margin: "0 0 14px", color: "#fff", lineHeight: 1.2 }}>{result.headline}</h2>
-              <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 15, lineHeight: 1.75, marginBottom: 20 }}>{result.primaryRecommendation}</p>
-              {result.tiktokCaption && (
-                <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, padding: "12px 16px" }}>
-                  <span style={{ fontSize: 10, color: "#FFD93D", letterSpacing: "2px", textTransform: "uppercase", fontWeight: 700 }}>🎵 TikTok Caption</span>
-                  <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginTop: 6, fontStyle: "italic" }}>"{result.tiktokCaption}"</p>
+            <div style={{ background: "linear-gradient(135deg, rgba(255,107,107,0.1), rgba(77,150,255,0.1))", border: "2px solid rgba(255,255,255,0.15)", borderRadius: 24, overflow: "hidden", marginBottom: 16 }}>
+
+              {/* Sock Type Image Banner */}
+              {SOCK_IMAGES[result.sockType] && (
+                <div style={{ position: "relative" }}>
+                  <img src={SOCK_IMAGES[result.sockType]} alt={result.sockType} style={{ width: "100%", height: 200, objectFit: "cover", display: "block", filter: "brightness(0.7)" }} />
+                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,12,41,0.95) 0%, transparent 60%)" }} />
+                  <div style={{ position: "absolute", bottom: 16, left: 24, right: 24, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                    <div>
+                      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", letterSpacing: "3px", textTransform: "uppercase", marginBottom: 4 }}>Recommended Style</div>
+                      <div style={{ fontSize: 22, fontFamily: "'Syne', sans-serif", fontWeight: 800, color: "#FFD93D", textTransform: "capitalize" }}>{result.sockType} Socks</div>
+                    </div>
+                    {result.confidenceLevel && (
+                      <span style={{ fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", padding: "6px 14px", borderRadius: 50, background: `${confidenceColors[result.confidenceLevel]}33`, color: confidenceColors[result.confidenceLevel], border: `1.5px solid ${confidenceColors[result.confidenceLevel]}66`, fontWeight: 700 }}>{result.confidenceLevel}</span>
+                    )}
+                  </div>
                 </div>
               )}
+
+              <div style={{ padding: "24px 28px 28px" }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
+                  <span style={{ fontSize: 36 }}>{result.sockEmoji}</span>
+                  <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: 800, color: "#fff", lineHeight: 1.2 }}>{result.headline}</h2>
+                </div>
+                <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 15, lineHeight: 1.75, marginBottom: 20 }}>{result.primaryRecommendation}</p>
+                {result.tiktokCaption && (
+                  <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, padding: "12px 16px" }}>
+                    <span style={{ fontSize: 10, color: "#FFD93D", letterSpacing: "2px", textTransform: "uppercase", fontWeight: 700 }}>🎵 TikTok Caption</span>
+                    <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginTop: 6, fontStyle: "italic" }}>"{result.tiktokCaption}"</p>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
